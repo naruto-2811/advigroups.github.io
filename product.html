@@ -1,0 +1,633 @@
+	<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Advi Groups</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="styles/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles/plugins/icofont/icofont.min.css" rel="stylesheet">
+  <link href="styles/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"> 
+  <link href="styles/plugins/animate.css/animate.min.css" rel="stylesheet"> 
+  <link href="styles/plugins/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="styles/plugins/aos/aos.css" rel="stylesheet"> 
+  <link href="styles/css/style.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+<style>
+#portfolio {
+  padding: 60px 0;
+}
+
+#portfolio #portfolio-flters {
+  padding: 0;
+  margin: 5px 0 35px 0;
+  list-style: none;
+  text-align: center;
+}
+
+#portfolio #portfolio-flters li {
+  cursor: pointer;
+  margin: 15px 15px 15px 0;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #666666;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background: #fff;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#portfolio #portfolio-flters li:hover, #portfolio #portfolio-flters li.filter-active {
+  background: #18d26e;
+  color: #fff;
+}
+
+#portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+#portfolio .portfolio-wrap {
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+#portfolio .portfolio-wrap:hover {
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+#portfolio .portfolio-item {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+}
+
+#portfolio .portfolio-item figure {
+  background: #000;
+  overflow: hidden;
+  height: 240px;
+  position: relative;
+  border-radius: 4px 4px 0 0;
+  margin: 0;
+}
+
+#portfolio .portfolio-item figure:hover img {
+  opacity: 0.4;
+  transition: 0.3s;
+}
+
+#portfolio .portfolio-item figure .link-preview, #portfolio .portfolio-item figure .link-details {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  line-height: 1;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.2s linear;
+}
+
+#portfolio .portfolio-item figure .link-preview i, #portfolio .portfolio-item figure .link-details i {
+  padding-top: 6px;
+  font-size: 22px;
+  color: #333;
+}
+
+#portfolio .portfolio-item figure .link-preview:hover, #portfolio .portfolio-item figure .link-details:hover {
+  background: #18d26e;
+}
+
+#portfolio .portfolio-item figure .link-preview:hover i, #portfolio .portfolio-item figure .link-details:hover i {
+  color: #fff;
+}
+
+#portfolio .portfolio-item figure .link-preview {
+  left: calc(50% - 38px);
+  top: calc(50% - 18px);
+}
+
+#portfolio .portfolio-item figure .link-details {
+  right: calc(50% - 38px);
+  top: calc(50% - 18px);
+}
+
+#portfolio .portfolio-item figure:hover .link-preview {
+  opacity: 1;
+  left: calc(50% - 44px);
+}
+
+#portfolio .portfolio-item figure:hover .link-details {
+  opacity: 1;
+  right: calc(50% - 44px);
+}
+
+#portfolio .portfolio-item .portfolio-info {
+  background: #fff;
+  text-align: center;
+  padding: 30px;
+  height: 90px;
+  border-radius: 0 0 3px 3px;
+}
+
+#portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  line-height: 1px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  padding-bottom: 0;
+}
+
+#portfolio .portfolio-item .portfolio-info h4 a {
+  color: #333;
+}
+
+#portfolio .portfolio-item .portfolio-info h4 a:hover {
+  color: #18d26e;
+}
+
+#portfolio .portfolio-item .portfolio-info p {
+  padding: 0;
+  margin: 0;
+  color: #b8b8b8;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* Portfolio Details
+--------------------------------*/
+.portfolio-details {
+  padding-top: 30px;
+}
+
+.portfolio-details .portfolio-details-container {
+  position: relative;
+}
+
+.portfolio-details .portfolio-details-carousel {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
+  margin-top: 5px;
+  text-align: left;
+}
+
+.portfolio-details .portfolio-details-carousel .owl-dot {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd !important;
+}
+
+.portfolio-details .portfolio-details-carousel .owl-dot.active {
+  background-color: #18d26e !important;
+}
+
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  position: absolute;
+  right: 0;
+  bottom: -70px;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li + li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+  padding-top: 50px;
+}
+
+.portfolio-details .portfolio-description h2 {
+  width: 50%;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0 0 0 0;
+}
+
+@media (max-width: 768px) {
+  .portfolio-details .portfolio-description h2 {
+    width: 100%;
+  }
+  .portfolio-details .portfolio-info {
+    position: static;
+    margin-top: 30px;
+  }
+}
+
+.margin-right{
+margin-right: 30px;
+}
+
+</style>
+</head>
+<body>
+
+  <header id="header" class="fixed-top header-transparent">
+    <div class="container-fluid"> 
+      <div class="row justify-content-center">
+        <div class="col-xl-11 d-flex align-items-center">
+          <h1 class="logo mr-auto"><a href="index.html" class="logo mr-auto"><img src="styles/img/logo.png" alt="" class="img-fluid"></a></h1>
+          <nav class="nav-menu d-none d-lg-block">
+            <ul>
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="product.html">Product</a></li> 
+              <li class="drop-down"><a href="">Careers</a>
+                 <ul>
+                  <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfIcsiTwEEF61JlqUqDtrbGG0StXYsKxSYhzX6DoYwWvPLXkQ/viewform">Recruitment</a></li>
+                  <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe8Ag9WJ26h4COemxqc0vciaMVVHLRuH0V3FXEIN5wqmOuumw/viewform">Internship</a></li> 
+                </ul>
+              </li>
+              <li><a href="contact.html">Contact Us</a></li> 
+            </ul>
+          </nav>
+        </div>
+      </div> 
+    </div>
+  </header>
+
+<main id="main">  
+   <section id="call-to-action" style=" height: 60vh; background-image: url(styles/img/service.jpg)"  >
+      <div class="container text-center">
+        <h3 class="margin-top-30">Our Products</h3>  
+      </div>
+    </section>
+      
+    
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Our Portfolio</h3>
+        </header>
+
+    
+
+      <div class="row portfolio-container">
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="styles/img/chain_snatching.webp" class="img-fluid" alt=""> 
+              <a href="portfolio-details.html" class="link-details margin-right" title="More Details"><i class="fa fa-youtube"></i></a>
+            </figure>
+
+            <div class="portfolio-info"> 
+              <p>A Novel Tracker for controlling Chain Snatching-MEMS TECHNOLOGY</p>
+            </div>
+          </div>
+        </div>
+
+       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="styles/img/gold_store.jpg" class="img-fluid" alt=""> 
+              <a href="portfolio-details.html" class="link-details margin-right" title="More Details"><i class="fa fa-youtube"></i></a>
+            </figure>
+
+            <div class="portfolio-info"> 
+              <p>ADVI-UHF for Anti Gold Lifters</p>
+            </div>
+          </div>
+        </div>
+ 
+
+       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="styles/img/smarthome.png" class="img-fluid" alt=""> 
+              <a href="portfolio-details.html" class="link-details margin-right" title="More Details"><i class="fa fa-youtube"></i></a>
+            </figure>
+
+            <div class="portfolio-info"> 
+              <p>ADVI-Home Automation (Make in India)</p>
+            </div>
+          </div>
+        </div>
+
+           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="styles/img/mobile.jpg" class="img-fluid" alt=""> 
+              <a href="portfolio-details.html" class="link-details margin-right" title="More Details"><i class="fa fa-youtube"></i></a>
+            </figure>
+
+            <div class="portfolio-info"> 
+              <p>AT-Baleen (Mobile Theft Tracker)</p>
+            </div>
+          </div>
+        </div>
+
+    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="styles/img/jacket.jpg" class="img-fluid" alt=""> 
+              <a href="portfolio-details.html" class="link-details margin-right" title="More Details"><i class="fa fa-youtube"></i></a>
+            </figure>
+
+            <div class="portfolio-info"> 
+              <p>Women Safety Jacket (Aanchal)</p>
+            </div>
+          </div>
+        </div>
+       
+ <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="styles/img/alarm.gif" class="img-fluid" alt=""> 
+              <a href="portfolio-details.html" class="link-details margin-right" title="More Details"><i class="fa fa-youtube"></i></a>
+            </figure>
+
+            <div class="portfolio-info"> 
+              <p>TACTILE Smart sensor for Shop Lifters</p>
+            </div>
+          </div>
+        </div>
+
+
+         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="styles/img/face_detection.jpg" class="img-fluid" alt=""> 
+              <a href="portfolio-details.html" class="link-details margin-right" title="More Details"><i class="fa fa-youtube"></i></a>
+            </figure>
+
+            <div class="portfolio-info"> 
+              <p>GAIT Electronic Gadget</p>
+            </div>
+          </div>
+        </div>
+
+
+       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="styles/img/washingmachine.jpg" class="img-fluid" alt=""> 
+              <a href="portfolio-details.html" class="link-details margin-right" title="More Details"><i class="fa fa-youtube"></i></a>
+            </figure>
+
+            <div class="portfolio-info"> 
+              <p>ADVI Washing machine</p>
+            </div>
+          </div>
+        </div>
+       
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="styles/img/car.jpg" class="img-fluid" alt=""> 
+              <a href="portfolio-details.html" class="link-details margin-right" title="More Details"><i class="fa fa-youtube"></i></a>
+            </figure>
+
+            <div class="portfolio-info"> 
+              <p>Electronic OFF for MEV</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="styles/img/water.jpg" class="img-fluid" alt=""> 
+              <a href="portfolio-details.html" class="link-details margin-right" title="More Details"><i class="fa fa-youtube"></i></a>
+            </figure>
+
+            <div class="portfolio-info"> 
+              <p>MEMS (Water quality gadget)</p>
+            </div>
+          </div>
+        </div>
+
+
+         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="styles/img/blood.jpg" class="img-fluid" alt=""> 
+              <a href="portfolio-details.html" class="link-details margin-right" title="More Details"><i class="fa fa-youtube"></i></a>
+            </figure>
+
+            <div class="portfolio-info"> 
+              <p>SIRA (Blood Group gadget)</p>
+            </div>
+          </div>
+        </div>
+
+     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="styles/img/table.jpg" class="img-fluid" alt=""> 
+              <a href="portfolio-details.html" class="link-details margin-right" title="More Details"><i class="fa fa-youtube"></i></a>
+            </figure>
+
+            <div class="portfolio-info"> 
+              <p>Smart Interactive table</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      </div>
+    </section>
+ 
+
+
+
+
+
+
+
+
+
+
+  <section id="contact" class="section-bg">
+      <div class="container">
+
+        <div class="section-header">
+          <center><h3>Contact Us</h3> </center>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="fa fa-map-marker"></i>
+              <h3>Address</h3>
+              <address>  #122/123, First Floor,<br>
+      Shivaay Jewellers,Nandini layout,<br>
+      NH 766, T Narasipura Main Road,<br>
+      Mysuru-570028</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="fa fa-mobile"></i>
+              <h3>Phone Number</h3>
+              <p><a href="">+91-99005 97959</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="fa fa-envelope"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:vihaansolutions@gmail.com"> vihaansolutions@gmail.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+       
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-5">
+            <h6>Advi Groups</h6>
+                  <p class="text-justify">
+                    #122/123, First Floor,<br>
+      Shivaay Jewellers,Nandini layout,<br>
+      NH 766, T Narasipura Main Road,<br>
+      Mysuru-570028 <br>
+      Email: vihaansolutions@gmail.com /
+              hr@advitech.in <br>
+      Mob: +91-99005 97959</div>
+
+          <div class="col-xs-6 col-md-4">
+            <h6>Our Families</h6>
+            <ul class="footer-links">
+              <li><a href=" ">Vihanansudhan Technology </a></li>
+              <li><a href=" ">Adwiteya Technology </a></li>
+              <li><a href=" ">Basaveshwara Educational Charitable trust</a></li>
+              <li><a href=" ">  VA Developers and Builders</a></li>
+              <li><a href=" ">ADVI Udyog HR Consulting Sevices</a></li>
+              <li><a href=" ">ADVI LAW Associates</a></li>
+              <li><a href=" "> VS Travels</a></li>
+
+            </ul>
+          </div> 
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links"> 
+              <li><a href="http://scanfcode.com/about/">About Us</a></li>
+              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Services</a></li> 
+              <li><a href="http://scanfcode.com/sitemap/">Careers</a></li>
+              <li><a href="http://scanfcode.com/sitemap/">Campus</a></li>
+              <li><a href="http://scanfcode.com/sitemap/">Gallery</a></li>
+              <li><a href="http://scanfcode.com/sitemap/">Contact Us</a></li>
+
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright All Rights Reserved by ADVI Groups
+       
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+
+
+
+
+
+
+
+
+
+</main>
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+ 
+  <script src="styles/plugins/jquery/jquery.min.js"></script>
+  <script src="styles/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="styles/plugins/jquery.easing/jquery.easing.min.js"></script>
+  <script src="styles/plugins/waypoints/jquery.waypoints.min.js"></script>
+  
+  <script src="styles/plugins/owl.carousel/owl.carousel.min.js"></script>
+  <script src="styles/plugins/aos/aos.js"></script> 
+  <script src="styles/js/main.js"></script>
+
+
+
+
+  </body>
+</html>
