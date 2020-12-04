@@ -1580,3 +1580,56 @@ a[data-tooltip][data-placement="bottom"]::after {
 .margin-right{
 margin-right: 30px;
 }
+
+
+
+
+
+
+
+
+.goog-te-banner-frame {display: none;margin-top:-20px;}
+
+.goog-logo-link {
+   display:none !important;
+} 
+
+.goog-te-gadget{
+   color: transparent !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+    margin: 0px 0px !important;
+}
+
+.goog-te-combo, .goog-te-banner *, .goog-te-ftab * {
+    background: transparent;
+    border:none;
+    color: #737373;
+   
+}
+
+
+ 
+ select.goog-te-combo
+{
+    color: white;
+}
+option
+{
+    color: #000;
+}
+ 
+
+ .goog-te-combo, .goog-te-banner *, .goog-te-ftab * {
+   display: block;
+    position: relative;
+    color: #fff;
+    transition: 0.3s;
+    font-size: 12px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 600; 
+}
+
+ 
