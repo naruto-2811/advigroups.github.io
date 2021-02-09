@@ -17,36 +17,223 @@
   <link href="styles/plugins/aos/aos.css" rel="stylesheet"> 
   <link href="styles/css/style.css" rel="stylesheet">
 <style>
+         
 
+.sec-title {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.sec-title.small {
+    margin-bottom: 35px;
+}
+
+.sec-title h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 50px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: #1a224c;
+}
+
+.sec-title h1:before {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 60px;
+    height: 2px;
+    content: "";
+    background: #3e9001;
+}
+
+.sec-title h1:after {
+    position: absolute;
+    left: 20px;
+    bottom: 0px;
+    width: 60px;
+    height: 2px;
+    content: "";
+    background: #3e9001;
+}
+
+.sec-title.centered h1:after,
+.sec-title.centered h1:before {
+    right: 0;
+    margin: 0 auto;
+}
+
+.sec-title.light h1 {
+    color: #fff;
+}
+
+.sec-title h3 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.1em;
+    margin-bottom: 20px;
+}
+
+.sec-title.light h3 {
+    color: #fff;
+}
+
+.sec-title.light .text {
+    color: #fff;
+}
+
+.sec-title.centered {
+    text-align: center;
+}
+
+.sec-title .text {
+    margin-top: 15px;
+    color: #888;
+    max-width: 960px;
+}
+
+.sec-title.centered .text {
+    margin: 0 auto;
+}
+
+.sec-title.style-two {
+    margin-bottom: 40px;
+}
+
+
+.working-process-step {
+    position: relative;
+}
+
+.working-process-step:before {
+    content: '';
+    position: absolute;
+    left: -0;
+    right: -0;
+    height: 100%;
+    display: block;
+    background: url(https://i.ibb.co/ypVJxZR/step-arrow.png) center center no-repeat;
+}
+
+.working-process .row {
+    margin: 0 -65px;
+}
+
+.process-block{
+    position:relative;
+    margin-bottom:40px;
+    padding: 0 65px;
+}
+
+.process-block .inner-box{
+    position:relative;
+    padding: 50px 35px 33px;
+    box-shadow: 0px 15px 39px 0px rgba(8, 18, 109, 0.1);
+    transition:all 0.3s ease;
+    -moz-transition:all 0.3s ease;
+    -webkit-transition:all 0.3s ease;
+    -ms-transition:all 0.3s ease;
+    -o-transition:all 0.3s ease;
+    background-color:#ffffff;
+    text-align: center;
+    transition: .5s ease;
+}
+
+.process-block .inner-box:hover {
+    box-shadow: 0px -10px 39px 0px rgba(8, 18, 109, 0.1);
+    transform: translateY(-10px);
+}
+
+.process-block:nth-child(2) .inner-box {
+    margin-top: 70px;
+}
+
+.process-block .inner-box .count-box {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #3e9001;
+    margin: 0 auto;
+    color: #ffffff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 25px;
+    font-weight: 800;
+    font-family: 'Muli', sans-serif;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+.process-block .inner-box h3{
+    position:relative;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.process-block .inner-box .text{
+    position:relative;
+    color:#777777;
+    font-size:14px;
+    line-height:1.8em;
+    margin-bottom:18px;
+    transition:all 0.3s ease;
+    -moz-transition:all 0.3s ease;
+    -webkit-transition:all 0.3s ease;
+    -ms-transition:all 0.3s ease;
+    -o-transition:all 0.3s ease;
+}
+
+@keyframes float-bob-y {
+  0% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-1.px);
+    transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.float-bob-y{
+    animation-name: float-bob-y; 
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  
+  -webkit-animation-name: float-bob-y; 
+    -webkit-animation-duration: 2s; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+  
+  -moz-animation-name: float-bob-y; 
+    -moz-animation-duration: 2s; 
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+  
+  -ms-animation-name: float-bob-y; 
+    -ms-animation-duration: 2s; 
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+  
+  -o-animation-name: float-bob-y; 
+    -o-animation-duration: 2s; 
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+}
 </style>
 </head>
 <body>
 
 
   
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-</script>
-
-
-<script>
-
-  (function(){var gtConstEvalStartTime = new Date();/*
-
- Copyright The Closure Library Authors.
- SPDX-License-Identifier: Apache-2.0
-*/
-var h=this||self,l=/^[\w+/_-]+[=]{0,2}$/,m=null;function n(a){return(a=a.querySelector&&a.querySelector("script[nonce]"))&&(a=a.nonce||a.getAttribute("nonce"))&&l.test(a)?a:""}function p(a,b){function c(){}c.prototype=b.prototype;a.c=b.prototype;a.prototype=new c;a.prototype.constructor=a;a.b=function(g,f,k){for(var e=Array(arguments.length-2),d=2;d<arguments.length;d++)e[d-2]=arguments[d];return b.prototype[f].apply(g,e)}}function q(a){return a};function r(a){if(Error.captureStackTrace)Error.captureStackTrace(this,r);else{var b=Error().stack;b&&(this.stack=b)}a&&(this.message=String(a))}p(r,Error);r.prototype.name="CustomError";function u(a,b){a=a.split("%s");for(var c="",g=a.length-1,f=0;f<g;f++)c+=a[f]+(f<b.length?b[f]:"%s");r.call(this,c+a[g])}p(u,r);u.prototype.name="AssertionError";function v(a,b){throw new u("Failure"+(a?": "+a:""),Array.prototype.slice.call(arguments,1));};var w;function x(a,b){this.a=b===y?a:""}x.prototype.toString=function(){return"TrustedResourceUrl{"+this.a+"}"};var y={};function z(a){var b=document.getElementsByTagName("head")[0];b||(b=document.body.parentNode.appendChild(document.createElement("head")));b.appendChild(a)}
-function _loadJs(a){var b=document;var c="SCRIPT";"application/xhtml+xml"===b.contentType&&(c=c.toLowerCase());c=b.createElement(c);c.type="text/javascript";c.charset="UTF-8";if(void 0===w){b=null;var g=h.trustedTypes;if(g&&g.createPolicy){try{b=g.createPolicy("goog#html",{createHTML:q,createScript:q,createScriptURL:q})}catch(t){h.console&&h.console.error(t.message)}w=b}else w=b}a=(b=w)?b.createScriptURL(a):a;a=new x(a,y);a:{try{var f=c&&c.ownerDocument,k=f&&(f.defaultView||f.parentWindow);k=k||h;
-if(k.Element&&k.Location){var e=k;break a}}catch(t){}e=null}if(e&&"undefined"!=typeof e.HTMLScriptElement&&(!c||!(c instanceof e.HTMLScriptElement)&&(c instanceof e.Location||c instanceof e.Element))){e=typeof c;if("object"==e&&null!=c||"function"==e)try{var d=c.constructor.displayName||c.constructor.name||Object.prototype.toString.call(c)}catch(t){d="<object could not be stringified>"}else d=void 0===c?"undefined":null===c?"null":typeof c;v("Argument is not a %s (or a non-Element, non-Location mock); got: %s",
-"HTMLScriptElement",d)}a instanceof x&&a.constructor===x?d=a.a:(d=typeof a,v("expected object of type TrustedResourceUrl, got '"+a+"' of type "+("object"!=d?d:a?Array.isArray(a)?"array":d:"null")),d="type_error:TrustedResourceUrl");c.src=d;(d=c.ownerDocument&&c.ownerDocument.defaultView)&&d!=h?d=n(d.document):(null===m&&(m=n(h.document)),d=m);d&&c.setAttribute("nonce",d);z(c)}
-function _loadCss(a){var b=document.createElement("link");b.type="text/css";b.rel="stylesheet";b.charset="UTF-8";b.href=a;z(b)}function _isNS(a){a=a.split(".");for(var b=window,c=0;c<a.length;++c)if(!(b=b[a[c]]))return!1;return!0}function _setupNS(a){a=a.split(".");for(var b=window,c=0;c<a.length;++c)b.hasOwnProperty?b.hasOwnProperty(a[c])?b=b[a[c]]:b=b[a[c]]={}:b=b[a[c]]||(b[a[c]]={});return b}
-window.addEventListener&&"undefined"==typeof document.readyState&&window.addEventListener("DOMContentLoaded",function(){document.readyState="complete"},!1);
-if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google.translate._const');c._cest = gtConstEvalStartTime;gtConstEvalStartTime = undefined;c._cl='en';c._cuc='googleTranslateElementInit';c._cac='';c._cam='';c._ctkk='446315.3666395047';var h='translate.googleapis.com';var s=(true?'https':window.location.protocol=='https:'?'https':'http')+'://';var b=s+h;c._pah=h;c._pas=s;c._pbi=b+'/translate_static/img/te_bk.gif';c._pci=b+'/translate_static/img/te_ctrl3.gif';c._pli=b+'/translate_static/img/loading.gif';c._plla=h+'/translate_a/l';c._pmi=b+'/translate_static/img/mini_google.png';c._ps=b+'/translate_static/css/translateelement.css';c._puh='translate.google.com';_loadCss(c._ps);_loadJs(b+'/translate_static/js/element/main.js');})();})();
-</script>
-
 
  
     <header id="header" class="fixed-top header-transparent">
@@ -59,13 +246,12 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
                             <li class="active"><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="venchors.html">Our Ventures</a></li>
+                             <li><a href="in_business.html">International Business</a></li>
                             <li><a href="service.html">Services</a></li>
                             <li><a href="product.html">Product</a></li>
                             <li><a href="careers.html">Careers</a></li>
-
-
                             <li><a href="contact.html">Contact Us</a></li>
-                            <li id="google_translate_element"> </li>
+                             
                         </ul>
                     </nav>
                 </div>
@@ -100,9 +286,9 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
 
 
 <main id="main">  
-   <section id="call-to-action" style=" height: 60vh; background-image: url(styles/img/service.jpg)"  >
+   <section id="call-to-action" style=" height: 60vh; background-image: url(styles/img/international.jpg)"  >
       <div class="container text-center">
-        <h3 class="margin-top-30">معنا سوف تحقق المستحيل <br>كفاءة وتأثير وذكاء ياخذك الى عالم كبير</h3>  
+        <h3 class="margin-top-30">International Business</h3>  
       </div>
     </section>
       
@@ -110,39 +296,77 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
 
 
 
-   <section id="team ">
-      <div class="container"> 
-        <header class="section-header margin-top-30">
-         <center> <h3>فرع السعوديه-الرياض</h3></center> 
-        </header><br><br> 
-        <div class="row"> 
-          <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <img src="styles/img/frontpage.jpg" class="img-fluid" alt="">
-              
+ 
+ 
+ 
+      <section id="about">  
+      <div class="container">  
+        <header class="section-header">
+         <center> <h3>Agenda</h3></center>
+          <center><p>
+            ADVI Groups of companies provide service,technologies,capital and/or knowledge across national borders and global levels.It involves sharing of knowledge and technologies between two nations and also include transaction of economic resource.
+          </p></center>
+        </header>
+
+
+ <section class="working-process sp-two">
+        <div class="container">
+            <!--Sec Title-->
+            <div class="sec-title centered">
+                <h1>We Complete Your Steps</h1>
             </div>
-          </div>
-
-          <div class="col-lg-8 col-md-6">
-            <div class="member textalign">
-              <h4>Vihanansudhan Technology LLP -شركة اديتيا ووهان سودان للتقنية والذكاء الاصطناعي </h4>
-              شركتنا سوف تقدم  حلول  تكنولوجيا المعلومات ، وسوف  تُقرض العملاء في أعمال البحث والتطوير في مجال تكنولوجيا المعلومات والهندسة ،   ايضا سوف نقوم بتدريب الطلاب والعملاء وخريخي الجامعات والكليات والنهوض بهم نحو مستقبل يليق بالوطن العربي , ان شركتنا لها الخبرة في تحقيق الاهداف على مستوى عالي من الكفاءة والخدمات عالميا ولها عدة برامج اختراع مسجلة الذي يضمن لها البقاء بالسوق باستمرار  
-            </div> 
-          </div> 
-        </div> 
-
-
-
-  
-
-
-
-
-
- 
+            <div class="working-process-step">
+            <div class="row">
+                <!--Process Block-->
+              
+                <!--Process Block-->
+                <div class="process-block col-md-3">
+                    <div class="inner-box float-bob-y">
+                        <div class="count-box">
+                            <div class="count">50%</div>
+                        </div>
+                        <h3>Research</h3>
+                       
+                    </div>
+                </div>
+                <!--Process Block-->
+                <div class="process-block col-md-3">
+                    <div class="inner-box">
+                        <div class="count-box">
+                            <div class="count">75%</div>
+                        </div>
+                        <h3>Production</h3>
+                         
+                    </div>
+                </div>
+                  <div class="process-block col-md-3">
+                    <div class="inner-box float-bob-y">
+                        <div class="count-box">
+                            <div class="count">100%</div>
+                        </div>
+                        <h3>Ideation</h3>
+                        
+                    </div>
+                </div>
+                  <div class="process-block col-md-3">
+                    <div class="inner-box">
+                        <div class="count-box">
+                            <div class="count">25%</div>
+                        </div>
+                        <h3>Delivery</h3>
+                      </div>
+                </div>
+            </div>
+        </div>
+        </div>
     </section>
- 
- 
+
+          
+
+        
+        </div> 
+      </div>
+    </section> 
  
 
 
@@ -151,7 +375,7 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
       <div class="container">
 
         <div class="section-header">
-          <center><h3>Contact Us -اتصل ببنا</h3> </center>
+          <center><h3>Contact Us</h3> </center>
         </div>
 
         <div class="row contact-info">
@@ -159,11 +383,10 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
           <div class="col-md-4">
             <div class="contact-address">
               <i class="fa fa-map-marker"></i>
-              <h3>العنوان داخل المملكة </h3>
-              <address>  حي النسيم الغربي<br>
+              <h3>Address</h3>
+              <address>   Riyadh alnseem western<br> abdulrahaman street<br>
     
-      حي النسيم 
-     الرياض</address>
+      </address>
             </div>
           </div>
 
@@ -171,7 +394,7 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
             <div class="contact-phone">
               <i class="fa fa-mobile"></i>
               <h3>Call us at</h3>
-              <p><a href="tel:9118004197719">+91 1800 419 7719</a></p>
+              <p><a href="tel:9118004197719">+91 6366267979</a></p>
             </div>
           </div>
 
@@ -179,7 +402,7 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
             <div class="contact-email">
               <i class="fa fa-envelope"></i>
               <h3>Email</h3>
-              <p><a href="mailto:hr@advitech.in"> hradvigroups@gmail.com</a></p>
+              <p><a href="mailto:hr@advitech.in"> operationriyadh@advigroups.com</a></p>
             </div>
           </div> 
         </div> 
@@ -257,10 +480,7 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
   <script src="styles/js/main.js"></script>
 
 
-
  
-
-
 
   </body>
 </html>
