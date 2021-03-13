@@ -272,7 +272,11 @@
 
 </head>
 <body>
- 
+ <script type="text/javascript">
+    $(window).on('load', function() {
+        $('#exampleModalCenter').modal('show');
+    });
+</script>
  
       <header id="header" class="fixed-top header-transparent">
         <div class="container-fluid">
@@ -612,11 +616,7 @@
   <script src="styles/plugins/owl.carousel/owl.carousel.min.js"></script>
   <script src="styles/plugins/aos/aos.js"></script> 
   <script src="styles/js/main.js"></script>
-<script type="text/javascript">
-    $(window).on('load', function() {
-        $('#exampleModalCenter').modal('show');
-    });
-</script>
+
 <script>
   jQuery(document).ready(function($) {
             "use strict";
