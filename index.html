@@ -455,14 +455,31 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
 </section>
 
  
+ <!-- Button trigger modal -->
  
+
+<!-- Modal -->
+<div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle" style="color: red">Public Notice</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="text-align: justify;">
+        This is to been to public notice /client /any type of business with ADVI Group the autenticated email ID's are <b> vihaansolutions@gmail.com</b> and <b> operationriyadh@advigroups.com </b> apart from these email ID's if any communication and financial discussion are done that is not resposible for company. It has come to the notice of company management that terminated employee's are continuing with company client with fake email ID's. If so the concern person has to inform the management <b>BS Manusudhan </b>Contact: <b>9900597959</b> immedietley.
+      </div>      
+    </div>
+  </div>
+</div>
 
 
       <section id="about">  
       <div class="container">  
         <header class="section-header">
-          <center> <h3 style="color: red">Public Notice</h3>
-                    <p>This is to been to public notice /client /any type of business with ADVI Group the autenticated email ID's are <b> vihaansolutions@gmail.com</b> and <b> operationriyadh@advigroups.com </b> apart from these email ID's if any communication and financial discussion are done that is not resposible for company. It has come to the notice of company management that terminated employee's are continuing with company client with fake email ID's. If so the concern person has to inform the management <b>BS Manusudhan </b>Contact: <b>9900597959</b> immedietley.</p></center>
+        
 
 
          <center> <h3>About Us</h3></center>
@@ -680,6 +697,11 @@ window.onresize = function () {
 
 
 
+</script>
+<script type="text/javascript">
+    $(window).on('load', function() {
+        $('#exampleModalCenter').modal('show');
+    });
 </script>
 
   </body> 
